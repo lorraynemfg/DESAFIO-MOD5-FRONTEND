@@ -23,11 +23,11 @@ function handleChangeInputValue(event) {
  }
   return (
 <>
-        <div className='container'> 
-            <div className='esquerda-menu'>   
+        <div className='container-cadastro'> 
+            <div className='esquerda-menu-cadastro'>   
             <MenuEstagio />
             </div>
-        <div className='direita-form'>
+        <div className='direita-form-cadastro'>
             <form onSubmit={handleSubmit}>
                 <div className='titulo'>
                     <h1>Adicione seus dados</h1>

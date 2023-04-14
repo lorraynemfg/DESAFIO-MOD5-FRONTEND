@@ -1,10 +1,10 @@
-.container-cadastro {
+.container {
     display: flex;  
-    width: 100vw;
+    width: 100vw;;
     align-items: center;
     background-color: #F8F8F9;
 }
-.esquerda-menu-cadastro {
+.esquerda-menu {
     width:500px;
     height: 100vh;  
     padding-top: 163px;
@@ -12,26 +12,36 @@
     display: flex;
     background: #F0F0F5;
 }
-.direita-form-cadastro form {
-    width:calc(100vw - 500px);
+
+.direita-form form {
+    width: calc(100vw - 500px);
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
-.input-grupo, .input {
+.input-grupo, .input-senha, .input-repetirSenha {
     display: flex;
     flex-direction: column; 
     margin-top: 30px;
-    gap: 8px;       
+    gap: 8px;   
+    position: relative;    
 }
 
-.input input {  
+.input-senha input, .input-repetirSenha input {  
     width: 368px;
     height: 44px;
     border: 1px solid #D0D5DD;
     box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
     border-radius: 8px;
     padding: 10px;      
+}
+
+.mostrar-senha {
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+    bottom: 15px;
 }
 .btn-cadastro{
   
@@ -66,7 +76,6 @@
 }
 
 .scroll-horizontal img {
-    padding: 5px;
     margin-top: 80px;
     margin-bottom: 50px;
 }
