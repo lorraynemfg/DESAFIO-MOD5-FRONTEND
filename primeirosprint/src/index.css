@@ -18,3 +18,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* .MuiStepIcon-root .MuiStepIcon-active {
+    color: green !important;
+  } */
+
+  .MuiStepIcon-root {
+    color: green !important;
+  }
+
+  .MuiStepConnector-line, .MuiStepConnector-lineVertical, .css-8t49rw-MuiStepConnector-line{
+    color: green !important;
+  }
