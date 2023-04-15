@@ -1,16 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-// import Login from './Pages/Login/index'
-import Cadastro from './Pages/Cadastro';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import Resumo from "./Pages/Resumo";
+// import Login from "./Pages/Login/index";
+// import Cadastro from "./Pages/Cadastro/index";
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Cadastro />
+    <Resumo />
   </React.StrictMode>
 );
-
-
-

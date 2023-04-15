@@ -1,23 +1,21 @@
-*{
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Nunito:wght@200;300;400;500;600;700&display=swap%27");
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body {
 
-  margin: 0;
- 
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
- 
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -25,10 +23,20 @@ code {
     color: green !important;
   } */
 
-  .MuiStepIcon-root {
-    color: green !important;
-  }
+.MuiStepIcon-root {
+  color: green !important;
+}
 
-  .MuiStepConnector-line, .MuiStepConnector-lineVertical, .css-8t49rw-MuiStepConnector-line{
-    color: green !important;
-  }
+.MuiStepConnector-line,
+.MuiStepConnector-lineVertical,
+.css-8t49rw-MuiStepConnector-line {
+  color: green !important;
+}
+
+.MuiTableCell-root {
+  font-family: "Nunito", sans-serif !important;
+}
+
+.MuiTable-root {
+  font-family: "Nunito", sans-serif !important;
+}

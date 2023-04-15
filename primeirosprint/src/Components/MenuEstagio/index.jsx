@@ -1,25 +1,24 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Stepper from '@mui/material/Stepper';
-import Step from '@mui/material/Step';
-import StepLabel from '@mui/material/StepLabel';
-import StepContent from '@mui/material/StepContent';
-import Button from '@mui/material/Button';
-import Paper from '@mui/material/Paper';
-import Typography from '@mui/material/Typography';
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Stepper from "@mui/material/Stepper";
+import Step from "@mui/material/Step";
+import StepLabel from "@mui/material/StepLabel";
+import StepContent from "@mui/material/StepContent";
+import Button from "@mui/material/Button";
+import Paper from "@mui/material/Paper";
+import Typography from "@mui/material/Typography";
 
 const steps = [
   {
-    label: 'Cadastre-se',
+    label: "Cadastre-se",
     description: `Por favor, escreva seu nome e e-mail`,
   },
   {
-    label: 'Escolha uma senha',
-    description:
-      'Escolha uma senha segura',
+    label: "Escolha uma senha",
+    description: "Escolha uma senha segura",
   },
   {
-    label: 'Cadastro realizado com sucesso',
+    label: "Cadastro realizado com sucesso",
     description: `E-mail e senha cadastro com sucesso`,
   },
 ];
@@ -44,7 +43,8 @@ export default function VerticalLinearStepper() {
       <Stepper activeStep={activeStep} orientation="vertical">
         {steps.map((step, index) => (
           <Step key={step.label}>
-            <StepLabel sx={{color:'green'}}
+            <StepLabel
+              sx={{ color: "green" }}
               optional={
                 index === 2 ? (
                   <Typography variant="caption">Last step</Typography>
@@ -54,8 +54,7 @@ export default function VerticalLinearStepper() {
               {step.label}
             </StepLabel>
             <StepContent>
-              <Typography >{step.description}</Typography>
-            
+              <Typography>{step.description}</Typography>
             </StepContent>
           </Step>
         ))}

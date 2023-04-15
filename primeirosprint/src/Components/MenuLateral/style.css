@@ -1,0 +1,24 @@
+section {
+  width: 110px;
+  min-height: 100vh;
+
+  background: #dedee9;
+}
+
+.icones {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 45px;
+  padding-left: 25px;
+  gap: 60px;
+
+  width: 80px;
+  height: 370px;
+}
+
+.icones img {
+  cursor: pointer;
+}
