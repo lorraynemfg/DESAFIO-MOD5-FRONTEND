@@ -14,8 +14,8 @@ header {
   display: flex;
   align-items: center;
 
-  width: 370px;
-  height: 34px;
+  width: 50%;
+  height: 35px;
 
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
@@ -36,6 +36,8 @@ header {
   height: 48px;
 
   margin-right: 140px;
+
+  color: #0e8750;
 }
 
 .perfil span {
@@ -43,6 +45,4 @@ header {
   font-weight: 600;
   font-size: 18px;
   line-height: 25px;
-
-  color: #0e8750;
 }

@@ -6,10 +6,21 @@ import iconeCobranca from "../../assets/icone-cobranca.svg";
 function MenuLateral() {
   return (
     <section>
-      <div className="icones">
-        <img src={iconeHome} alt="icone-home" />
-        <img src={iconeClientes} alt="icone-clientes" />
-        <img src={iconeCobranca} alt="icone-cobranca" />
+      <div className="container-menu">
+        <div className="icones">
+          <img src={iconeHome} alt="icone-home" />
+          <span>Home</span>
+        </div>
+
+        <div className="icones">
+          <img src={iconeClientes} alt="icone-clientes" />
+          <span>Clientes</span>
+        </div>
+
+        <div className="icones">
+          <img src={iconeCobranca} alt="icone-cobranca" />
+          <span>Cobranças</span>
+        </div>
       </div>
     </section>
   );
