@@ -7,6 +7,8 @@ import iconeVencido from "../../assets/icone-vencido.svg";
 import TabelaPagos from "../../Components/TabelaPagos";
 import TabelaVencidos from "../../Components/TabelaVencidos";
 import TabelaPrevistos from "../../Components/TabelaPrevistos";
+import TabelaInadimplentes from "../../Components/TabelaInadimplentes";
+import TabelaEmDia from "../../Components/TabelaEmDia";
 
 function Resumo() {
   return (
@@ -51,10 +53,16 @@ function Resumo() {
               </div>
             </div>
           </div>
-          <div className="tabelas">
+
+          <div className="tabelas-cobrancas">
             <TabelaPagos />
             <TabelaVencidos />
             <TabelaPrevistos />
+          </div>
+
+          <div className="tabelas-clientes">
+            <TabelaInadimplentes />
+            <TabelaEmDia />
           </div>
         </main>
       </div>

@@ -12,7 +12,7 @@ section {
   align-items: center;
 
   padding-top: 45px;
-  padding-left: 25px;
+  padding-left: 15px;
   gap: 60px;
 
   width: 80px;
@@ -20,5 +20,8 @@ section {
 }
 
 .icones img {
+  width: 77px;
+  height: 74px;
+
   cursor: pointer;
 }
