@@ -1,0 +1,22 @@
+.estagio{
+    display: flex;
+    gap: 10px;
+    text-align:justify;   
+} 
+.icone{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+      
+ } 
+.informacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.titulo-menu{
+    color: #0E8750;
+
+}

@@ -1,0 +1,113 @@
+.container {
+  display: flex;
+}
+
+main {
+  width: calc(100vw - 110px);
+  background-color: #f8f8f9;
+}
+
+hr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 95%;
+
+  margin: 0px 32px;
+  border: 1px solid #acd9c5;
+}
+
+.cobrancas {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  width: 90%;
+  height: 110px;
+
+  margin: 20px 110px 25px 80px;
+
+  cursor: pointer;
+}
+
+.pagas {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  width: 360px;
+  height: 111px;
+
+  margin-top: 20px;
+  padding: 23px 40px;
+
+  background-color: #b5f8f8;
+  border-radius: 30px;
+}
+
+.vencidas {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  width: 360px;
+  height: 111px;
+
+  margin-top: 20px;
+  padding: 23px 40px;
+
+  background-color: #fdb0b0;
+  border-radius: 30px;
+}
+
+.previstas {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  width: 360px;
+  height: 111px;
+
+  margin-top: 20px;
+  padding: 23px 40px;
+
+  background-color: #fff4c2;
+  border-radius: 30px;
+}
+
+.icone-cobranca {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 70px;
+  height: 70px;
+}
+
+.icone-cobranca img {
+  width: 33px;
+  height: 33px;
+}
+
+.texto-cobranca {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 150px;
+  height: 65px;
+}
+
+.tabelas {
+  display: flex;
+
+  width: 90%;
+  height: 450px;
+
+  gap: 20px;
+  margin: 20px 110px 25px 80px;
+
+  font-family: Nunito;
+}

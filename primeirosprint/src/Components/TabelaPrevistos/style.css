@@ -1,0 +1,92 @@
+.container-tabelas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 90%;
+  height: 450px;
+
+  font-family: Nunito;
+}
+
+.titulo-tabela-previsto {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  width: 360px;
+  height: 58px;
+
+  gap: 20px;
+
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(172, 217, 197, 0.25);
+
+  border-radius: 20px 20px 0 0;
+}
+
+.titulo-tabela-previsto strong {
+  width: 188px;
+  height: 23px;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 130%;
+
+  display: flex;
+  align-items: center;
+
+  color: #3f3f55;
+}
+
+.titulo-tabela-previsto span {
+  width: 52px;
+  height: 21px;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 130%;
+
+  text-align: center;
+
+  color: #c5a605;
+  background-color: #fff4c2;
+  border-radius: 8px;
+}
+
+.ancora-tabela {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  width: 360px;
+  height: 58px;
+
+  gap: 20px;
+
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(172, 217, 197, 0.25);
+
+  border-radius: 0 0 20px 20px;
+}
+
+.ancora-tabela span {
+  width: 78px;
+  height: 23px;
+
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+
+  display: flex;
+  align-items: center;
+  text-decoration-line: underline;
+
+  color: #da0175;
+
+  cursor: pointer;
+}

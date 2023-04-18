@@ -1,0 +1,48 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: calc(100vw - 110px);
+  height: 80px;
+
+  padding: 35px;
+  margin-top: 40px;
+}
+
+.titulo {
+  display: flex;
+  align-items: center;
+
+  width: 370px;
+  height: 34px;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 130%;
+
+  text-align: center;
+
+  color: #343447;
+}
+
+.perfil {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 150px;
+  height: 48px;
+
+  margin-right: 140px;
+}
+
+.perfil span {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+
+  color: #0e8750;
+}

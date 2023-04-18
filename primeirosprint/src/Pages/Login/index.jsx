@@ -1,20 +1,26 @@
 
 import './style.css';
 import { useState } from 'react';
-
-
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
-  const [form, setForm] = useState({ name: '', email: '' });
-  const [error, setError] = useState('');
+    const navegar = useNavigate();  
+    const [form, setForm] = useState({ name: '', email: '' });
+    const [error, setError] = useState('');
+
+    const aoClicar = () => navegar('/');
 
   async function handleSubmit(event) {
       event.preventDefault();
 
+      try {
       if (!form.email || !form.password) {
           setError("Preencha todos os campos!");
           return;
       }
+    }catch(error){
+        console.error(error.response.message); 
+    }
 
       // const { data, status } = await api.post('/login', {
       //     email: form.email,

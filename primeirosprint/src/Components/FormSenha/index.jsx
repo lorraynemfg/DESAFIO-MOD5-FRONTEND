@@ -3,24 +3,26 @@ import retanguloVerde from '../../assets/retangulo-verde.svg';
 import retangulo from '../../assets/retangulo.svg';
 import olhoAberto from '../../assets/olho-aberto.svg';
 import olhoFechado from '../../assets/olho-fechado.svg';
-import MenuEstagio from'../../Components/MenuEstagio';
 import { useState } from 'react';
 
 
-function Senha() {
+function FormSenha() {
     const [form, setForm] = useState({ senha: '', repitaSenha: '' });
     const [error, setError] = useState('');
     const [mostrarSenha, setMostrarSenha] = useState(false);
     const [mostrarRepetirSenha, setmostrarRepetirSenha] = useState(false);
-    
+    const [senhaIncorreta, setSenhaIncorreta] = useState('');
   
     async function handleSubmit(event) {
         event.preventDefault();
   
         if (!form.senha || !form.repitaSenha) {
             setError("Preencha todos os campos!");
-            return;
-        }}
+            
+        }else if (form.senha !== form.repitaSenha) {
+            setSenhaIncorreta("As senhas não coincidem");
+        }
+    }
 
 function handleChangeInputValue(event) {
     setError('');
@@ -28,10 +30,7 @@ function handleChangeInputValue(event) {
  }
   return (
 <>
-        <div className='container'> 
-            <div className='esquerda-menu'>   
-            <MenuEstagio />
-            </div>
+        <div> 
         <div className='direita-form'>
             <form onSubmit={handleSubmit}>
                 <div className='titulo'>
@@ -60,20 +59,20 @@ function handleChangeInputValue(event) {
                         value={form.repitaSenha}
                         onChange={handleChangeInputValue}
                     />
-
                     <img className='mostrar-senha'
                                 src={mostrarRepetirSenha ? olhoFechado : olhoAberto}
                                 alt='mostrar senha'
                                 onClick={() => setmostrarRepetirSenha(!mostrarRepetirSenha)} />
-                    </div>
-
-                    
+                    </div>  
                 </div>
 
-                <div>
+                <div className="btnEerro">
+                    {error && <span className='mensagem-error'>{error}</span>}
+                    {senhaIncorreta && <span className='mensagem-error'>{senhaIncorreta}</span>}
                     <button type='submit' className='btn-cadastro'>Finalizar cadastro</button>
                 </div>
-                        <span>Já possui conta? Faça seu <a className='link-para-Login' href='#'>Login</a></span>
+
+                <span>Já possui conta? Faça seu <a className='link-para-Login' href='#'>Login</a></span>
             </form>
             <div className='scroll-horizontal'>
                 <img src={retangulo} alt="scroll-horizontal" />
@@ -86,4 +85,4 @@ function handleChangeInputValue(event) {
   )
 }
 
-export default Senha;
+export default FormSenha;
