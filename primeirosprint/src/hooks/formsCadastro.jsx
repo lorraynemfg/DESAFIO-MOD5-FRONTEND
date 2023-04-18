@@ -5,7 +5,7 @@ import { useState } from "react";
 
     function mudarEstagio(indice, evento){
         evento.preventDefault();
-
+        
         if(indice < 0 || indice >= estagios.length)
         return
 

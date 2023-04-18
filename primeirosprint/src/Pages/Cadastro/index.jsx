@@ -3,25 +3,30 @@ import MenuEstagio from "../../Components/MenuEstagio";
 import FormNomeEmail from "../../Components/FormNomeEmail";
 import FormSenha from "../../Components/FormSenha";
 import FormSucesso from "../../Components/FormSucesso";
-
-import { FormsCadastro } from "../../hooks/formsCadastro";
-
+import { useState } from "react";
 
 function Cadastro() {
-
-  const formComponentes = [<FormNomeEmail />, <FormSenha />, <FormSucesso />];
-
-  const {estagioAtual, formularioAtual, mudarEstagio} = FormsCadastro(formComponentes)
-
+  const [formulario, setFormulario] = useState(0);
+  
   return (
 <>
         <div className='container-cadastro'> 
             <div className='esquerda-menu-cadastro'>   
             < MenuEstagio 
-            estagioAtual={estagioAtual}/>
+            estagioFormulario={formulario}
+            />
             </div>
+
             <div className="direita-form-cadastro">
-            {formularioAtual}
+            {formulario === 0 && <FormNomeEmail
+            setFormulario={setFormulario}
+            />}
+            {formulario === 1 &&<FormSenha 
+            setFormulario={setFormulario}
+             /> }
+            {formulario === 2 && <FormSucesso 
+            setFormulario={setFormulario}
+            />}
             </div>
       
       </div>

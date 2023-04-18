@@ -6,7 +6,7 @@ import olhoFechado from '../../assets/olho-fechado.svg';
 import { useState } from 'react';
 
 
-function FormSenha() {
+function FormSenha({setFormulario}) {
     const [form, setForm] = useState({ senha: '', repitaSenha: '' });
     const [error, setError] = useState('');
     const [mostrarSenha, setMostrarSenha] = useState(false);
@@ -22,6 +22,7 @@ function FormSenha() {
         }else if (form.senha !== form.repitaSenha) {
             setSenhaIncorreta("As senhas não coincidem");
         }
+        setFormulario(2)
     }
 
 function handleChangeInputValue(event) {
