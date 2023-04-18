@@ -46,3 +46,13 @@ header {
   font-size: 18px;
   line-height: 25px;
 }
+
+.icones-menu-perfil {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  margin-left: 2px;
+}

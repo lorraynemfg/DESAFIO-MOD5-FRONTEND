@@ -2,7 +2,7 @@
   display: flex;
 }
 
-main {
+.main {
   width: calc(100vw - 110px);
   background-color: #f8f8f9;
 }
@@ -100,7 +100,7 @@ hr {
   align-items: center;
   justify-content: space-between;
 
-  width: 190px;
+  width: 210px;
   height: 65px;
 }
 

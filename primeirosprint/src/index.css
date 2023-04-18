@@ -40,3 +40,11 @@ code {
 .MuiTable-root {
   font-family: "Nunito", sans-serif !important;
 }
+
+.MuiSvgIcon-root {
+  color: #343447 !important;
+}
+
+.css-10d9dml-MuiTabs-indicator {
+  background-color: #da0175 !important;
+}
