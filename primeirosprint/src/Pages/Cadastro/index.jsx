@@ -7,28 +7,29 @@ import { useState } from "react";
 
 function Cadastro() {
   const [formulario, setFormulario] = useState(0);
-  
-  return (
-<>
-        <div className='container-cadastro'> 
-            <div className='esquerda-menu-cadastro'>   
-            < MenuEstagio 
-            estagioFormulario={formulario}
-            />
-            </div>
 
-            <div className="direita-form-cadastro">
-            {formulario === 0 && <FormNomeEmail
+  return (
+    <>
+      <div className='container-cadastro'>
+        <div className='esquerda-menu-cadastro'>
+          < MenuEstagio
+            estagioFormulario={formulario}
             setFormulario={setFormulario}
-            />}
-            {formulario === 1 &&<FormSenha 
+          />
+        </div>
+
+        <div className="direita-form-cadastro">
+          {formulario === 0 && <FormNomeEmail
             setFormulario={setFormulario}
-             /> }
-            {formulario === 2 && <FormSucesso 
+          />}
+          {formulario === 1 && <FormSenha
             setFormulario={setFormulario}
-            />}
-            </div>
-      
+          />}
+          {formulario === 2 && <FormSucesso
+            setFormulario={setFormulario}
+          />}
+        </div>
+
       </div>
     </>
   );
