@@ -13,6 +13,8 @@ import iconeLupa from "../../assets/icone-lupa.svg";
 import iconeOrdenar from "../../assets/ordenar-clientes.svg";
 import iconeCriarCobranca from "../../assets/icone-criar-cobranca.svg";
 import "./style.css";
+import Modal from '../../Components/modal';
+import { useState } from 'react';
 
 function createData(nome, cpf, email, telefone, status) {
   return { nome, cpf, email, telefone, status };
@@ -92,6 +94,14 @@ const rows = [
 ];
 
 function Clientes() {
+  const [modalActive, setModalActive] = useState(false);
+  const [modalType, setModalType] = useState('');
+
+  function handleModalActive(event, modalType) {
+    event.preventDefault()
+    setModalType(modalType)
+    setModalActive(!modalActive)
+  }
   return (
     <>
       <div className="container">
@@ -107,7 +117,7 @@ function Clientes() {
             </div>
 
             <div className="adicionar-procurar">
-              <button className="adicionar-cliente">+ Adicionar cliente</button>
+              <button className="adicionar-cliente" onClick={(event) => handleModalActive(event, 'cadastrarCliente')} >+ Adicionar cliente</button>
               <button className="filtrar-cliente">
                 <img src={iconeFiltro} alt="icone-filtro" />
               </button>
@@ -305,6 +315,7 @@ function Clientes() {
             </TableContainer>
           </div>
         </main>
+        {modalActive && <Modal handleModalActive={handleModalActive} modalType={modalType} />}
       </div>
     </>
   );

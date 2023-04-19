@@ -18,6 +18,16 @@ hr {
   border: 1px solid #acd9c5;
 }
 
+button:hover {
+  scale: 1.01;
+  filter: brightness(1.05);
+}
+
+button:active {
+  scale: 0.99;
+  filter: brightness(0.8);
+}
+
 .barra-filtro {
   display: flex;
   align-items: center;

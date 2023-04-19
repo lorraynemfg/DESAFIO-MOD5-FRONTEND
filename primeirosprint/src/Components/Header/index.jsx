@@ -7,16 +7,30 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import * as React from "react";
 import "./style.css";
+import { useState } from 'react';
+
+import Modal from '../../Components/modal';
 
 function Header() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
+  const [modalActive, setModalActive] = useState(false);
+  const [modalType, setModalType] = useState('');
+
+  function handleModalActive(event, modalType) {
+    event.preventDefault()
+    setModalType(modalType)
+    setModalActive(!modalActive)
+  }
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+
 
   return (
     <>
@@ -70,7 +84,7 @@ function Header() {
           >
             <div className="icones-menu-perfil">
               <MenuItem
-                onClick={handleClose}
+                onClick={(event) => handleModalActive(event, 'editarCadastro')}
                 sx={{
                   display: "flex",
                   flexDirection: "column",
@@ -105,6 +119,7 @@ function Header() {
           </Menu>
         </div>
       </header>
+      {modalActive && <Modal handleModalActive={handleModalActive} modalType={modalType} />}
     </>
   );
 }

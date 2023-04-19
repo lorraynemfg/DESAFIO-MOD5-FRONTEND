@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@600;700&family=Nunito:wght@400;600&display=swap');
+
+.container-cadastro-do-cliente {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 40px 56px 40px 56px;
+}
+
+
+.container-cadastro-do-cliente img {
+    margin-right: 18px;
+    height: 30px;
+}
+
+.container-cadastro-do-cliente form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-cadastro-do-cliente input {
+    margin-bottom: 6px;
+}
+
+.container-cadastro-do-cliente button {
+    width: 160px;
+    height: 33px;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+
+}
+
+.container-cadastro-do-cliente button:last-child {
+    border: 1px solid #DA0175;
+    background: #DA0175;
+    color: #F8F8F9;
+}
+
+.container-cadastro-do-cliente button:first-child {
+    border: 1px solid #DEDEE9;
+    background: #F8F8F9;
+    color: #0E8750;
+}
+
+.container-cadastro-do-cliente .container-titulo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.container-cadastro-do-cliente .campos-verticais {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 57px;
+}
+
+.container-cadastro-do-cliente .campos-horizontais {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 24px;
+}
+
+.container-cadastro-do-cliente .campos-horizontais div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.length-160 {
+    width: 160px;
+}
+
+.length-224 {
+    width: 224px;
+}
+
+.length-235 {
+    width: 235px;
+}
+
+.length-303 {
+    width: 303px;
+}
+
+.container-cadastro-do-cliente .message-error {
+    margin-top: -6px;
+    color: red;
+}
