@@ -1,30 +1,18 @@
 import "./style.css";
 import retanguloVerde from "../../assets/retangulo-verde.svg";
 import retangulo from "../../assets/retangulo.svg";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
-import { FormsCadastro } from "../../hooks/formsCadastro";
-import FormSenha from "../../Components/FormSenha";
-import FormSucesso from "../../Components/FormSucesso";
 
-// function paginacao(){
-//   useEffect(() =>{
-//   })
-// }
+
 function FormNomeEmail({setFormulario}) {
   
   const navigate = useNavigate();
   const [form, setForm] = useState({ nome: "", email: "" });
   const [error, setError] = useState("");
- 
-  const formComponentes = [<FormNomeEmail />, <FormSenha />, <FormSucesso />];
- 
-  const {estagioAtual, mudarEstagio} = FormsCadastro(formComponentes);
   const navegarClick = () => navigate('/');
 
 
-
-  
   async function submeter(event) {
     event.preventDefault();
 
@@ -35,7 +23,6 @@ function FormNomeEmail({setFormulario}) {
     setFormulario(1)
   }
 
-  
   function handleChangeInputValue(event) {
     setError("");
     setForm({ ...form, [event.target.name]: event.target.value });

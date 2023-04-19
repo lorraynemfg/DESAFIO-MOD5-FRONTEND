@@ -2,8 +2,11 @@ import './style.css';
 import retanguloVerde from '../../assets/retangulo-verde.svg';
 import retangulo from '../../assets/retangulo.svg';
 import sucesso from '../../assets/sucesso.svg';
+import { useNavigate } from 'react-router-dom';
 
 function FormSucesso() {
+  const navigate = useNavigate();
+  const navegarClick = () => navigate('/');
   return (
 <>
         <div> 
@@ -13,7 +16,7 @@ function FormSucesso() {
                 <h1>Cadastro realizado com sucesso!</h1>
             </div>
             <div className='btn-irLogin'>
-                <button type='submit' className='btn-cadastro'>Ir para Login</button>
+                <button type='button' className='btn-cadastro' onClick={() => navegarClick("/")}>Ir para Login</button>
             </div>
             <div className='scroll-horizontal'>
                 <img src={retangulo} alt="scroll-horizontal" />
