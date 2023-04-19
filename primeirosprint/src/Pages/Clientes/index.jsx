@@ -13,6 +13,7 @@ import iconeLupa from "../../assets/icone-lupa.svg";
 import iconeOrdenar from "../../assets/ordenar-clientes.svg";
 import iconeCriarCobranca from "../../assets/icone-criar-cobranca.svg";
 import "./style.css";
+import ModalCadastrouCliente from "../../Components/ModalCadastrouCliente";
 
 function createData(nome, cpf, email, telefone, status) {
   return { nome, cpf, email, telefone, status };
@@ -304,6 +305,7 @@ function Clientes() {
               </Table>
             </TableContainer>
           </div>
+          <ModalCadastrouCliente />
         </main>
       </div>
     </>
