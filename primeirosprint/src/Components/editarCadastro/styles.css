@@ -85,7 +85,7 @@
     justify-content: center;
 }
 
-.input-senha {
+.container-editar-cadastro .input-senha {
     display: flex;
     position: relative;
     flex-direction: row;
@@ -93,7 +93,7 @@
     width: 100%;
 }
 
-.input-senha img {
+.container-editar-cadastro .input-senha img {
     position: absolute;
     right: 2px;
     top: 10px;

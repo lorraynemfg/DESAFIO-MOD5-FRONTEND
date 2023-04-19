@@ -1,11 +1,14 @@
 import './style.css';
 import { useState } from 'react';
-
+import { useNavigate } from 'react-router-dom';
 
 
 function Login() {
+
+  const navigate = useNavigate();
   const [form, setForm] = useState({ email: '', senha: '' });
   const [error, setError] = useState(['', '', '#D0D5DD', '#D0D5DD']);
+  const navegarClick = () => navigate('/cadastro');
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -80,7 +83,7 @@ function Login() {
             <div>
               <button type="submit" className="btn-enter">Entrar</button>
             </div>
-            <span>Ainda não possui uma conta? <a href='#' className='link'>Cadastre-se</a></span>
+            <span>Ainda não possui uma conta? <a onClick={() => navegarClick("/")} className='link'>Cadastre-se</a></span>
           </form>
 
         </div>
