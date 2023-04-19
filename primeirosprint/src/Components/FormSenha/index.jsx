@@ -3,31 +3,51 @@ import retanguloVerde from '../../assets/retangulo-verde.svg';
 import retangulo from '../../assets/retangulo.svg';
 import olhoAberto from '../../assets/olho-aberto.svg';
 import olhoFechado from '../../assets/olho-fechado.svg';
-import { useState } from 'react';
+import {  useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import axiosPrivate from '../../services/api';
 
+function FormSenha({setFormulario, setFormSenha, formSenha, email, nome}) {
+    const navigate = useNavigate();
 
-function FormSenha({setFormulario}) {
-    const [form, setForm] = useState({ senha: '', repitaSenha: '' });
     const [error, setError] = useState('');
     const [mostrarSenha, setMostrarSenha] = useState(false);
     const [mostrarRepetirSenha, setmostrarRepetirSenha] = useState(false);
     const [senhaIncorreta, setSenhaIncorreta] = useState('');
-  
+  const navegarClick = () => navigate('/');
+
     async function handleSubmit(event) {
         event.preventDefault();
   
-        if (!form.senha || !form.repitaSenha) {
+        if (!formSenha.senha || !formSenha.repitaSenha) {
             setError("Preencha todos os campos!");
             
-        }else if (form.senha !== form.repitaSenha) {
+        }else if (formSenha.senha !== formSenha.repitaSenha) {
             setSenhaIncorreta("As senhas não coincidem");
         }
-        setFormulario(2)
+        localStorage.setItem('senha', formSenha.senha)
+        
+        try {
+            const response = await axiosPrivate.post('/usuarios', {
+                    nome,
+                    email,
+                    senha: formSenha.senha
+            })
+               
+            setFormulario(2)
+            return;
+        } catch (error) {
+          
+            return;
+        }
+
+
+        
     }
 
 function handleChangeInputValue(event) {
     setError('');
-    setForm({ ...form, [event.target.name]: event.target.value });
+    setFormSenha({ ...formSenha, [event.target.name]: event.target.value });
  }
   return (
 <>
@@ -43,7 +63,7 @@ function handleChangeInputValue(event) {
                             <input
                                 name="senha"
                                 type={mostrarSenha ? 'text' : 'password'}
-                                value={form.senha}
+                                value={formSenha.senha}
                                 onChange={handleChangeInputValue}
                             />
                             <img className='mostrar-senha'
@@ -57,7 +77,7 @@ function handleChangeInputValue(event) {
                     <input
                         name="repitaSenha"
                         type={mostrarRepetirSenha ? 'text' : 'password'}
-                        value={form.repitaSenha}
+                        value={formSenha.repitaSenha}
                         onChange={handleChangeInputValue}
                     />
                     <img className='mostrar-senha'
@@ -70,10 +90,11 @@ function handleChangeInputValue(event) {
                 <div className="btnEerro">
                     {error && <span className='mensagem-error'>{error}</span>}
                     {senhaIncorreta && <span className='mensagem-error'>{senhaIncorreta}</span>}
+
                     <button type='submit' className='btn-cadastro'>Finalizar cadastro</button>
                 </div>
 
-                <span>Já possui conta? Faça seu <a className='link-para-Login' href='#'>Login</a></span>
+                <span>Já possui conta? Faça seu <a className='link-para-Login' onClick={() => navegarClick("/")}>Login</a></span>
             </form>
             <div className='scroll-horizontal'>
                 <img src={retangulo} alt="scroll-horizontal" />

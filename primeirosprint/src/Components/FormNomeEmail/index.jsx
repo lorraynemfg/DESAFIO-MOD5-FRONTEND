@@ -4,29 +4,29 @@ import retangulo from "../../assets/retangulo.svg";
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 
-
-function FormNomeEmail({setFormulario}) {
-  
+function FormNomeEmail({setFormulario, email, setEmail, nome, setNome}) {
+ 
   const navigate = useNavigate();
-  const [form, setForm] = useState({ nome: "", email: "" });
+
   const [error, setError] = useState("");
   const navegarClick = () => navigate('/');
 
 
   async function submeter(event) {
     event.preventDefault();
+    const checarEmail= /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (!form.nome || !form.email) {
+    if (!nome || !email) {
         setError("Preencha todos os campos!");
         return;
-    }
+      }
+      if ((email.search(checarEmail) == -1)){
+      setError("E-mail inválido")
+      return; 
+      }
+          
     setFormulario(1)
-  }
-
-  function handleChangeInputValue(event) {
-    setError("");
-    setForm({ ...form, [event.target.name]: event.target.value });
-  }
+ }
   return (
 <>
         <div className='direita-form-cadastro'>
@@ -41,8 +41,8 @@ function FormNomeEmail({setFormulario}) {
                                 name="nome"
                                 placeholder='Digite seu nome'
                                 type="text"
-                                value={form.nome}
-                                onChange={handleChangeInputValue}
+                                value={nome}
+                                onChange={(event) => setNome(event.target.value)}
                             />
                     </div>
                     <div className='input'>
@@ -51,8 +51,8 @@ function FormNomeEmail({setFormulario}) {
                         name="email"
                         placeholder='Digite seu e-mail'
                         type="email"
-                        value={form.email}
-                        onChange={handleChangeInputValue}
+                        value={email}
+                        onChange={(event) => setEmail(event.target.value)}
                     />
                     </div>
                     
@@ -60,7 +60,8 @@ function FormNomeEmail({setFormulario}) {
 
             <div className="btnEerro">
             {error && <span className='mensagem-error'>{error}</span>}
-              <button type="submit" className="btn-cadastro">
+
+              <button type="button" className="btn-cadastro" onClick={(event) => submeter(event)}>
                 Continuar
               </button>
             </div>
