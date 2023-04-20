@@ -34,7 +34,7 @@ function Header() {
 
   function loginOut() {
     clearAll();
-    navigate("/login");
+    navigate("/");
   }
 
   return (
