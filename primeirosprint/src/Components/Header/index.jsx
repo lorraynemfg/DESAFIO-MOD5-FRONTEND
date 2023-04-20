@@ -8,10 +8,12 @@ import MenuItem from "@mui/material/MenuItem";
 import * as React from "react";
 import "./style.css";
 import { useState } from 'react';
-
+import { clearAll } from '../../utils/storage';
 import Modal from '../../Components/modal';
+import { useNavigate } from 'react-router-dom';
 
 function Header() {
+  const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const [modalActive, setModalActive] = useState(false);
@@ -30,7 +32,10 @@ function Header() {
     setAnchorEl(null);
   };
 
-
+  function loginOut() {
+    clearAll();
+    navigate("/login");
+  }
 
   return (
     <>
@@ -112,7 +117,7 @@ function Header() {
                   color: "#747488",
                 }}
               >
-                <LogoutIcon />
+                <LogoutIcon onClick={() => loginOut()} />
                 Sair
               </MenuItem>
             </div>

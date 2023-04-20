@@ -1,56 +1,33 @@
 .container-cadastro {
-  display: flex;
+  display: flex;  
   width: 100vw;
   align-items: center;
   background-color: #F8F8F9;
 }
 
-.direita-form-cadastro {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .direita-form-cadastro form {
-  width: calc(100vw - 500px);
+  width:calc(100vw - 500px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 100px;
 }
-
-.direita-form-cadastro h1 {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 130%;
+.input-grupo, .input {
   display: flex;
-  align-items: center;
-  text-align: center;
-  color: #343447;
-}
-
-.input-grupo,
-.input {
-  display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   margin-top: 30px;
+  gap: 8px;       
 }
 
-.input input {
+.input input {  
   width: 368px;
   height: 44px;
   border: 1px solid #D0D5DD;
   box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
   border-radius: 8px;
-  margin: 6px 0 6px 0;
-  padding: 10px;
+  padding: 10px;      
 }
-
-.btn-cadastro {
-
+.btn-cadastro{
+ 
   width: 160px;
   height: 33px;
   background: #DA0175;
@@ -58,7 +35,7 @@
   border: none;
   margin-top: 40px;
   margin-bottom: 15px;
-
+  
   font-family: 'Nunito', sans-serif;
   font-style: normal;
   font-size: 18px;
@@ -73,22 +50,27 @@
   align-items: center;
 }
 
-.btn-cadastro:hover {
+.btn-cadastro:hover{
   opacity: 0.9;
 }
 
-.link-para-Login {
-  text-decoration: underline;
-  color: #DA0175;
-  cursor: pointer;
+.mensagem-error {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  color: #E70000;
+  display: flex;
+  padding: 20px;
 }
 
-.scroll-horizontal {
-  display: flex;
-  position: absolute;
-  justify-content: center;
-  bottom: 0px;
-  align-items: center;
+.link-para-Login{
+  color: #DA0175;
+  font-weight: bold;
+}
+
+.scroll-horizontal  {
+ display: flex;
+ justify-content: center;
+ 
 }
 
 .scroll-horizontal img {
