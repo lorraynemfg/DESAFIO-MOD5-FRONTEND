@@ -1,0 +1,38 @@
+.container-modal-cadastrou-cliente {
+    display: flex;
+    align-items: center;
+
+    position: fixed;
+    width: 330px;
+    height: 54px;
+    right: 60px;
+    bottom: 40px;
+
+    background-color: #c3d4fe;
+    box-shadow: 0px 4px 42px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.content-modal {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    width: 90%;
+
+    margin-left: 15px;
+}
+
+.content-modal img {
+    width: 24px;
+    height: 24px;
+}
+
+.content-modal span {
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+
+    color: #243f80;
+}

@@ -9,16 +9,26 @@
   background-color: #dedee9;
 }
 
+.container-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 365px;
+
+  margin: 45px 15px;
+}
+
 .icones {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  width: 75px;
+  width: 100%;
   height: 75px;
-
-  margin-left: 15px;
 
   font-family: "Nunito", sans-serif;
   font-weight: 600;
@@ -28,4 +38,17 @@
   color: #343447;
 
   cursor: pointer;
+}
+
+.icones img {
+  width: 48px;
+  height: 48px;
+}
+
+.selecionado {
+  border-right: 2px solid #da0175;
+}
+
+.texto-selecionado {
+  color: #da0175;
 }

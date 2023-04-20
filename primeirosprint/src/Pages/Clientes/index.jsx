@@ -15,6 +15,7 @@ import iconeCriarCobranca from "../../assets/icone-criar-cobranca.svg";
 import "./style.css";
 import Modal from '../../Components/modal';
 import { useState } from 'react';
+import ModalCadastrouCliente from "../../Components/ModalCadastrouCliente";
 
 function createData(nome, cpf, email, telefone, status) {
   return { nome, cpf, email, telefone, status };
@@ -96,10 +97,17 @@ const rows = [
 function Clientes() {
   const [modalActive, setModalActive] = useState(false);
   const [modalType, setModalType] = useState('');
+  const [formSubmit, setFormSubmit] = useState(false)
 
-  function handleModalActive(event, modalType) {
+  function handleModalActive(event, modalType, estadoSubmit) {
     event.preventDefault()
     setModalType(modalType)
+    setTimeout(() => {
+      setFormSubmit(estadoSubmit)
+    }, 1000);
+    setTimeout(() => {
+      setFormSubmit(false)
+    }, 5000);
     setModalActive(!modalActive)
   }
   return (
@@ -314,6 +322,7 @@ function Clientes() {
               </Table>
             </TableContainer>
           </div>
+          {formSubmit && <ModalCadastrouCliente />}
         </main>
         {modalActive && <Modal handleModalActive={handleModalActive} modalType={modalType} />}
       </div>

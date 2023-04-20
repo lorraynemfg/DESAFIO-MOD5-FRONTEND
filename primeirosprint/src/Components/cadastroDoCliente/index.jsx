@@ -1,7 +1,6 @@
 import './styles.css'
 import { useState } from 'react'
 import clientes from '../../assets/clientes.svg'
-import Sucesso from '../../assets/sucesso.svg'
 
 export default function CadastroDoCliente({ handleModalActive, tituloDoModal }) {
   const [error, setError] = useState(['', '#D0D5DD']);
@@ -146,7 +145,7 @@ export default function CadastroDoCliente({ handleModalActive, tituloDoModal }) 
         </div>
         <div className='campos-horizontais'>
           <button className='botao-cancelar' onClick={handleModalActive}>Cancelar</button>
-          <button className='botao-aplicar'>Aplicar</button>
+          <button className='botao-aplicar' onClick={(event) => { handleModalActive(event, '', true) }}>Aplicar</button>
         </div>
       </form>
     </div>
