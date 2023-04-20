@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 function FormSucesso() {
   const navigate = useNavigate();
-  const navegarClick = () => navigate('/login');
+  const navegarClick = () => navigate('/');
   return (
     <>
       <div>

@@ -10,7 +10,7 @@ function FormNomeEmail({ setFormulario, email, setEmail, nome, setNome }) {
 
   const [error, setError] = useState(['', '#D0D5DD']);
   const [errorEmail, setErrorEmail] = useState(['', '']);
-  const navegarClick = () => navigate('/login');
+  const navegarClick = () => navigate('/');
 
 
   async function submeter(event) {

@@ -14,7 +14,7 @@ function FormSenha({ setFormulario, setFormSenha, formSenha, email, nome }) {
     const [mostrarSenha, setMostrarSenha] = useState(false);
     const [mostrarRepetirSenha, setmostrarRepetirSenha] = useState(false);
     const [senhaIncorreta, setSenhaIncorreta] = useState('');
-    const navegarClick = () => navigate('/login');
+    const navegarClick = () => navigate('/');
 
     async function handleSubmit(event) {
         event.preventDefault();
