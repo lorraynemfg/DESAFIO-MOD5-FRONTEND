@@ -24,7 +24,7 @@ export default function CadastroDoCliente({ handleModalActive, tituloDoModal }) 
       setError(["Este campo deve ser preenchido", 'red'])
       return
     }
-    handleModalActive(event)
+    handleModalActive(event, '', true)
   }
 
   function handleChangeInputValue(event) {
@@ -145,7 +145,7 @@ export default function CadastroDoCliente({ handleModalActive, tituloDoModal }) 
         </div>
         <div className='campos-horizontais'>
           <button className='botao-cancelar' onClick={handleModalActive}>Cancelar</button>
-          <button className='botao-aplicar' onClick={(event) => { handleModalActive(event, '', true) }}>Aplicar</button>
+          <button className='botao-aplicar' type='submit'>Aplicar</button>
         </div>
       </form>
     </div>

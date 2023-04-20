@@ -129,8 +129,10 @@ function Clientes() {
               <button className="filtrar-cliente">
                 <img src={iconeFiltro} alt="icone-filtro" />
               </button>
-              <input placeholder="Pesquisa" />
-              <img className="lupa" src={iconeLupa} alt="icone-lupa" />
+              <div>
+                <input placeholder="Pesquisa" />
+                <img className="lupa" src={iconeLupa} alt="icone-lupa" />
+              </div>
             </div>
           </div>
 

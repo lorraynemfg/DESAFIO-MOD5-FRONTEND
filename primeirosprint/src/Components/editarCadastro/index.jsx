@@ -15,7 +15,7 @@ export default function EditarCadastro({ handleModalActive, tituloDoModal }) {
   })
   const [senhaVisivel, setSenhaVisivel] = useState(
     {
-      icon: EsconderSenha,
+      icon: MostrarSenha,
       inputType: 'password'
     });
   const [error, setError] = useState(['', '#D0D5DD']);
@@ -38,13 +38,13 @@ export default function EditarCadastro({ handleModalActive, tituloDoModal }) {
   function tornarSenhaVisivel() {
     if (senhaVisivel.inputType === 'password') {
       setSenhaVisivel({
-        icon: MostrarSenha,
+        icon: EsconderSenha,
         inputType: 'text'
       });
 
     } else {
       setSenhaVisivel({
-        icon: EsconderSenha,
+        icon: MostrarSenha,
         inputType: 'password'
       });
     }
@@ -105,7 +105,7 @@ export default function EditarCadastro({ handleModalActive, tituloDoModal }) {
               </div>
             </div>
             <label>Senha*</label>
-            <div className='input-senha'>
+            <div className='input-senha-editar-cadastro'>
               <input
                 name='senha'
                 type={senhaVisivel.inputType}
@@ -121,7 +121,7 @@ export default function EditarCadastro({ handleModalActive, tituloDoModal }) {
             </div>
             {error[0] && <span className="message-error">{error[0]}</span>}
             <label>Confirmação de senha*</label>
-            <div className='input-senha'>
+            <div className='input-senha-editar-cadastro'>
               <input
                 name='confirmaSenha'
                 type={senhaVisivel.inputType}

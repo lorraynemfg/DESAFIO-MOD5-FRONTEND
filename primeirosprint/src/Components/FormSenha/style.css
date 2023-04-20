@@ -1,74 +1,87 @@
 .container-cadastro {
-  display: flex;  
-  width: 100vw;;
+  display: flex;
+  width: 100vw;
+  ;
   align-items: center;
   background-color: #F8F8F9;
 }
+
 .esquerda-menu-cadastro {
-  width:500px;
-  height: 100vh;  
+  width: 500px;
+  height: 100vh;
   padding-top: 163px;
-  padding-left:47px;
+  padding-left: 47px;
   display: flex;
   background: #F0F0F5;
 }
 
-.direita-form form {
-  width: calc(100vw - 500px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-}
-.input-grupo, .input-senha, .input-repetirSenha {
-  display: flex;
-  flex-direction: column; 
-  margin-top: 30px;
-  gap: 8px;   
-  position: relative;    
-}
-
-.input-senha input, .input-repetirSenha input {  
-  width: 368px;
-  height: 44px;
-  border: 1px solid #D0D5DD;
-  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-  border-radius: 8px;
-  padding: 10px;      
-}
-
-.mostrar-senha {
-  position: absolute;
-  cursor: pointer;
-  right: 10px;
-  bottom: 15px;
-}
-
-.btnEerro {
+.direita-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.mensagem-error {
-  font-family: 'Nunito', sans-serif;
-  font-size: 16px;
-  color: #E70000;
+.direita-form .titulo-form-senha h1 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 130%;
   display: flex;
-  padding: 20px;
+  align-items: center;
+  text-align: center;
+  color: #343447;
 }
 
-.btn-cadastro{
+
+.direita-form form {
+  width: calc(100vw - 500px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.input-grupo,
+.input-senha,
+.input-repetirSenha {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  gap: 8px;
+  position: relative;
+}
+
+.input-senha input,
+.input-repetirSenha input {
+  width: 368px;
+  height: 44px;
+  border: 1px solid #D0D5DD;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.mostrar-senha {
+  position: absolute;
+  cursor: pointer;
+  right: 10px;
+  bottom: 9px;
+}
+
+.btnEerro {
+  align-items: center;
+}
+
+.btn-cadastro {
 
   width: 160px;
   height: 33px;
-  background: #DA0175;
-  border-radius: 10px;
   border: none;
   margin-top: 40px;
   margin-bottom: 15px;
-  
+
   font-family: 'Nunito', sans-serif;
   font-style: normal;
   font-size: 18px;
@@ -76,19 +89,18 @@
   cursor: pointer;
 }
 
-.btn-cadastro:hover{
+.btn-cadastro:hover {
   opacity: 0.9;
 }
 
-.link-para-Login{
+.link-para-Login {
   color: #DA0175;
-  font-weight: bold;
 }
 
-.scroll-horizontal  {
- display: flex;
- justify-content: center;
- 
+.scroll-horizontal {
+  display: flex;
+  justify-content: center;
+
 }
 
 .scroll-horizontal img {

@@ -129,10 +129,5 @@ function Header() {
   );
 }
 
-<>
-  <IconButton size="small">
-    <ExpandMoreIcon fontSize="small" />
-  </IconButton>
-</>;
 
 export default Header;

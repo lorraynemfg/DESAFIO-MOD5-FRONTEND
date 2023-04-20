@@ -37,8 +37,7 @@ function Login() {
       navigate('/resumo');
 
     } catch (err) {
-      console.log(err.response.data.mensagem)
-      return
+      setError(['Email não cadastrado', 'Senha Incorreta', 'red', 'red'])
     }
 
   }

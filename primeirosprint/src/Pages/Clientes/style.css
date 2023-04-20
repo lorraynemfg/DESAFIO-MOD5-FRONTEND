@@ -138,8 +138,8 @@ button:active {
 
 .lupa {
   position: absolute;
-  right: 70px;
-
+  right: 10px;
+  top: 10px;
   width: 24px;
   height: 24px;
 }
@@ -193,4 +193,8 @@ button:active {
 .em-dia {
   color: #1fa7af;
   background-color: #b5f8f8;
+}
+
+.adicionar-procurar div {
+  position: relative;
 }
