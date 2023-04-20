@@ -1,7 +1,8 @@
 import './style.css';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import { setItem } from '../../utils/storage';
+import api from '../../services/api'
 
 function Login() {
 
@@ -12,32 +13,33 @@ function Login() {
 
   async function handleSubmit(event) {
     event.preventDefault();
+    try {
+      if (!form.email && !form.senha) {
+        setError(["Este campo deve ser preenchido", 'Este campo deve ser preenchido', 'red', 'red']);
+        return
+      }
 
-    if (!form.email && !form.senha) {
-      setError(["Este campo deve ser preenchido", 'Este campo deve ser preenchido', 'red', 'red']);
+      if (!form.email) {
+        setError(["Este campo deve ser preenchido", '', 'red', '']);
+        return
+      }
+      if (!form.senha) {
+        setError(['', "Este campo deve ser preenchido", '', 'red']);
+        return;
+      }
+
+      const response = await api.post('/login', {
+        email: form.email,
+        senha: form.senha
+      });
+      const { token } = response.data;
+      setItem('token', token);
+      navigate('/resumo');
+
+    } catch (err) {
+      console.log(err.response.data.mensagem)
       return
     }
-
-    if (!form.email) {
-      setError(["Este campo deve ser preenchido", '', 'red', '']);
-      return
-    }
-    if (!form.senha) {
-      setError(['', "Este campo deve ser preenchido", '', 'red']);
-      return;
-    }
-    // const { data, status } = await api.post('/login', {
-    //     email: form.email,
-    //     senha: form.senha,
-    // });
-
-    //     if (status === 200) {
-    //         localStorage.setItem("token", data.token);
-    //         localStorage.setItem("user", JSON.stringify(data.usuario));
-    //         navigate('/home');
-    //     } else {
-    //         setError(data.mensagem);
-    //     }
 
   }
 
